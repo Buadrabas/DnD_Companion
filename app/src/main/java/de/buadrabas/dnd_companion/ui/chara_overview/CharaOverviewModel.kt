@@ -1,10 +1,10 @@
-package de.buadrabas.dnd_companion.ui.home
+package de.buadrabas.dnd_companion.ui.chara_overview
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
+class CharaOverviewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is home Fragment"
