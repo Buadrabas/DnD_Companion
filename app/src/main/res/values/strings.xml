@@ -8,4 +8,7 @@
     <string name="menu_overview_chara">Overview</string>
     <string name="menu_dice">Dice</string>
     <string name="menu_edit_chara">Character</string>
+    <string name="no_characters">You got no Characters</string>
+    <string name="CharacterCreatorText">Use the Charactor Creator to design your Character Step by Step</string>
+    <string name="character_creation_title">Character Creation</string>
 </resources>

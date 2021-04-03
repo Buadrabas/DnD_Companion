@@ -7,19 +7,28 @@
 
     <fragment
         android:id="@+id/nav_over_view"
-        android:name="de.buadrabas.dnd_companion.ui.chara_overview.CharaOverview"
+        android:name="de.buadrabas.dnd_companion.ui.fragments.CharaOverviewFragment"
         android:label="@string/menu_overview_chara"
-        tools:layout="@layout/fragment_chara_overview" />
+        tools:layout="@layout/fragment_chara_overview" >
+        <action
+            android:id="@+id/action_nav_over_view_to_nav_new_chara"
+            app:destination="@id/nav_new_chara" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_dice"
-        android:name="de.buadrabas.dnd_companion.ui.gallery.GalleryFragment"
+        android:name="de.buadrabas.dnd_companion.ui.fragments.DiceRollerFragment"
         android:label="@string/menu_dice"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_nav_dice_to_nav_over_view"
+            app:destination="@id/nav_over_view" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_edit_chara"
-        android:name="de.buadrabas.dnd_companion.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_edit_chara"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_new_chara"
+        android:name="de.buadrabas.dnd_companion.ui.fragments.CharacterBuilderFragment"
+        android:label="New Character"
+        tools:layout="@layout/fragment_character_builder" />
+
 </navigation>

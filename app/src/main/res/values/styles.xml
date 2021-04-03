@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BaseTheme" parent="@style/ThemeOverlay.AppCompat.Dark">
+        <item name="android:background">@color/grey_900</item>
+    </style>
+
+    <style name="Base.Theme.Character" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/grey_500</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/grey_900</item>
+        <item name="colorOnSurface">@color/amber_700</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="colorSurface">@color/teal_200</item>
+        <item name="colorSecondary">@color/purple_700</item>
+        <item name="android:colorBackground">@color/grey_700</item>
+    </style>
+
+    <style name="Theme.Character" parent="Base.Theme.Character"/>
+
+    <style name="Theme.Character.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Character.AppBarOverlay" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+</resources>
