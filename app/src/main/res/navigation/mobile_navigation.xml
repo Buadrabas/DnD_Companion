@@ -3,23 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_over_view">
-
-    <fragment
-        android:id="@+id/nav_over_view"
-        android:name="de.buadrabas.dnd_companion.ui.chara_overview.CharaOverview"
-        android:label="@string/menu_overview_chara"
-        tools:layout="@layout/fragment_chara_overview" />
+    app:startDestination="@id/nav_chara_overview">
 
     <fragment
         android:id="@+id/nav_dice"
-        android:name="de.buadrabas.dnd_companion.ui.gallery.GalleryFragment"
+        android:name="de.buadrabas.dnd_companion.layout.fragment.DicePoolFragment"
         android:label="@string/menu_dice"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_dice_pool" />
 
     <fragment
-        android:id="@+id/nav_edit_chara"
-        android:name="de.buadrabas.dnd_companion.ui.slideshow.SlideshowFragment"
+        android:id="@+id/nav_chara_overview"
+        android:name="de.buadrabas.dnd_companion.layout.fragment.CharaGalleryFragment"
         android:label="@string/menu_edit_chara"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_chara_gallery" />
 </navigation>

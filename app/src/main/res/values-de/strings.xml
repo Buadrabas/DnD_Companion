@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DnD_Companion</string>
+    <string name="charaName">Charaktername</string>
+    <string name="ageField">Alter</string>
+    <string name="playerName">Spielername</string>
+    <string name="menu_dice">Würfel</string>
+    <string name="menu_edit_chara">Charaktersammlung</string>
+    <string name="menu_overview_chara">Charakterübersicht</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="autofillHintPlayerName">Schreibe den Namen des Spielers des Charakters hier herein</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="playerName">Player Name</string>
+    <string name="charaName">Character Name</string>
+    <string name="ageField">Age</string>
+    <string name="fapDescription">Add a new Character to the Gallery</string>
+    <string name="character_builder_string">Character Builder</string>
+</resources>

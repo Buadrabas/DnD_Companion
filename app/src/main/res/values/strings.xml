@@ -1,11 +1,22 @@
 <resources>
     <string name="app_name">DnD_Companion</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_desc">Navigation header</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
     <string name="action_settings">Settings</string>
 
     <string name="menu_overview_chara">Overview</string>
     <string name="menu_dice">Dice</string>
     <string name="menu_edit_chara">Character</string>
+    <string name="playerName">Player name</string>
+    <string name="charaName">Character name:</string>
+    <string name="ageField">Age</string>
+    <string name="autofillHintPlayerName">Fill in the players name of the character which is created</string>
+    <string name="fapDescription">Add a new Character to the Gallery</string>
+    <string name="character_builder_string">Character Builder</string>
+    <string name="buttonAbilitiesString">Create your Abilities</string>
+    <string name="buttonRaceString">Choose your Race</string>
+    <string name="buttonClassString">Choose your Class</string>
+    <string name="buttonSkillString">Choose your Skills</string>
+    <string name="buttonFeatString">Choose your Feats</string>
 </resources>

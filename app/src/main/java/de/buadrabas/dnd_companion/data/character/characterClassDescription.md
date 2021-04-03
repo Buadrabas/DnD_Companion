@@ -1,27 +1,27 @@
 # Class Description
 Necessary Data:
-    - Name of Player
-    - Name of Character
-    - Age
-    - Alignment
-    - Deity
-    - Religion
-    - Class List
-    - Race
-    - Size
-    - Height
-    - Weight
-    - Vision
-    - Character Level
-    - XP Level
-    - Gender
-    - Eyes
-    - Hair
-    - Ability
-    - TP (Max/Current)
-    - AC
-    - Speed
-    - SR
-    - Initiative
-    - Languages
-    - Biography
+    [x] Name of Player
+    [x] Name of Character
+    [x] Age
+    [x] Alignment
+    [x] Deity
+    [ ] Religion
+    [ ] Class List
+    [ ] Race
+    [ ] Size
+    [ ] Height
+    [ ] Weight
+    [ ] Vision
+    [ ] Character Level
+    [ ] XP Level
+    [ ] Gender
+    [ ] Eyes
+    [ ] Hair
+    [ ] Ability
+    [ ] TP (Max/Current)
+    [ ] AC
+    [ ] Speed
+    [ ] SR
+    [ ] Initiative
+    [ ] Languages
+    [ ] Biography
