@@ -22,4 +22,11 @@
     <string name="buttonClassString">Choose your Class</string>
     <string name="buttonSkillString">Choose your Skills</string>
     <string name="buttonFeatString">Choose your Feats</string>
+    <string name="determine_score_string">Determine your Ability Score</string>
+    <string name="choose_race_string">Choose your Race</string>
+    <string name="choose_class_string">Choose your Class</string>
+    <string name="choose_skills_string">Choose your Skills</string>
+    <string name="choose_feat_string">Choose a Feat</string>
+
+
 </resources>

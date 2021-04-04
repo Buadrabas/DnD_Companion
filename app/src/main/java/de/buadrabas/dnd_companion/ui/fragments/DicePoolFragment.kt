@@ -1,4 +1,4 @@
-package de.buadrabas.dnd_companion.layout.fragment
+package de.buadrabas.dnd_companion.ui.fragments
 
 import androidx.fragment.app.Fragment
 import de.buadrabas.dnd_companion.R

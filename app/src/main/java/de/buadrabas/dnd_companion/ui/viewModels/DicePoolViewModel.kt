@@ -1,4 +1,4 @@
-package de.buadrabas.dnd_companion.viewModels
+package de.buadrabas.dnd_companion.ui.viewModels
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
