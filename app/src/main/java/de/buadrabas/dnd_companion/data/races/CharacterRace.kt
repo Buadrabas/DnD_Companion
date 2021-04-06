@@ -4,9 +4,12 @@ import de.buadrabas.dnd_companion.data.races.Size
 
 interface CharacterRace {
 	val AttributeAdjustment: List<Int>
-	val RacialTraits: List<String>
+	val RacialTraits: List<RacialTraits>
 	val FavoredClass: String
-	val Size: Int // Size are from
+	val Size: Size // Size are from
+	val MovementSpeedFeet: Int
+	val MovementSpeedMeter: Int
+	val Vision: Vision
 }
 
 /**
@@ -14,18 +17,12 @@ interface CharacterRace {
  */
 
 
-data class RaceDescription(
-    val AbilityChanges: List<Int>,
-    val SpecialFeats: List<String>,
-    val Size: Size,
-    val Language: List<String>,
-    val Vision: Vision
-) {
-	
-}
-
 enum class Vision(val vision: String) {
 	NORMAL_VISION("Normal Vision"),
 	LOW_LIGHT_VISION("Normal Vision"),
 	DARK_VISION("Normal Vision")
+}
+
+data class RacialTraits(val traitTitle: String, val traitDescription: String) {
+
 }

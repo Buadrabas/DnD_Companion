@@ -27,6 +27,7 @@
     <string name="choose_class_string">Choose your Class</string>
     <string name="choose_skills_string">Choose your Skills</string>
     <string name="choose_feat_string">Choose a Feat</string>
+    <string name="reroll_button_description">Reroll the Scores</string>
 
 
 </resources>
