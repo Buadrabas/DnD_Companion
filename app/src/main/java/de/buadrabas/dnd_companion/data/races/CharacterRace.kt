@@ -10,6 +10,7 @@ interface CharacterRace {
 	val MovementSpeedFeet: Int
 	val MovementSpeedMeter: Int
 	val Vision: Vision
+	val RaceName: String
 }
 
 /**

@@ -1,60 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.CreateNewActivity">
 
-    <TextView
-        android:id="@+id/textView2"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/character_builder_string"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:theme="@style/Theme.DnD_Companion.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.DnD_Companion.PopupOverlay"
+            app:title="Create a new Character"
+            tools:visibility="visible" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <fragment
+        android:id="@+id/nav_host_new_char_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="46dp" />
-
-    <Button
-        android:id="@+id/buttonAbilities"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonAbilitiesString"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:layout_editor_absoluteX="16dp" />
-
-    <Button
-        android:id="@+id/buttonRace"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonRaceString"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAbilities"
-        tools:layout_editor_absoluteX="-48dp" />
-
-    <Button
-        android:id="@+id/buttonClass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonClassString"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRace"
-        tools:layout_editor_absoluteX="-16dp" />
-
-    <Button
-        android:id="@+id/buttonFeats"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonFeatString"
-        app:layout_constraintTop_toBottomOf="@+id/buttonClass"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <Button
-        android:id="@+id/buttonSkills"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonSkillString"
-        app:layout_constraintTop_toBottomOf="@+id/buttonFeats"
-        tools:layout_editor_absoluteX="33dp" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:navGraph="@navigation/nav_graph_new_character" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
