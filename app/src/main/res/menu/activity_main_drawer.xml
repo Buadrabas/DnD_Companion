@@ -5,7 +5,7 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_chara_gallery_overview"
+            android:id="@+id/nav_chara_gallery"
             android:icon="@drawable/ic_chara_gallery"
             android:title="@string/menu_overview_chara" />
         <item
@@ -15,8 +15,6 @@
         <item
             android:id="@+id/nav_notes"
             android:icon="@drawable/ic_chara_gallery"
-            android:title="Notes"
-            />
-
+            android:title="@string/notes" />
     </group>
 </menu>
