@@ -4,19 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MainActivity">
+    tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.DnD_Companion.AppBarOverlay">
+        android:theme="@style/Theme.DndApp">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/toolbar_main"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="#000000"
-            app:popupTheme="@style/Theme.DnD_Companion.PopupOverlay" />
+            app:popupTheme="@style/Theme.DndApp"
+            />
 
     </com.google.android.material.appbar.AppBarLayout>
 

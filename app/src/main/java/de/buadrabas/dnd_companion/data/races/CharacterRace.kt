@@ -1,15 +1,14 @@
-package de.buadrabas.dnd_companion.data
+package de.buadrabas.dnd_companion.data.races
 
-import de.buadrabas.dnd_companion.data.races.Size
-
-interface CharacterRace {
-	val AttributeAdjustment: List<Int>
-	val RacialTraits: List<RacialTraits>
-	val FavoredClass: String
-	val Size: Size // Size are from
-	val MovementSpeedFeet: Int
-	val MovementSpeedMeter: Int
-	val Vision: Vision
+abstract class CharacterRace {
+	abstract val AttributeAdjustment: List<Int>
+	abstract val RacialTraits: List<RacialTraits>
+	abstract val FavoredClass: String
+	abstract val Size: Size // Size are from
+	abstract val MovementSpeedFeet: Int
+	abstract val MovementSpeedMeter: Int
+	abstract val Vision: Vision
+	abstract val RaceName: String
 }
 
 /**
@@ -23,6 +22,4 @@ enum class Vision(val vision: String) {
 	DARK_VISION("Normal Vision")
 }
 
-data class RacialTraits(val traitTitle: String, val traitDescription: String) {
-
-}
+data class RacialTraits(val traitTitle: String, val traitDescription: String)

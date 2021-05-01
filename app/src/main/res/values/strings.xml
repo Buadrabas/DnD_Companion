@@ -28,6 +28,9 @@
     <string name="choose_skills_string">Choose your Skills</string>
     <string name="choose_feat_string">Choose a Feat</string>
     <string name="reroll_button_description">Reroll the Scores</string>
+    <string name="notes">Notes</string>
+    <string name="character_gallery_fragment">Character Gallery Fragment</string>
+    <string name="chara_sheet_fragment">Character Details Fragment</string>
 
 
 </resources>
