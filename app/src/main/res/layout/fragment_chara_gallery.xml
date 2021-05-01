@@ -3,13 +3,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.characterGallery.CharacterGalleryFragment">
+    tools:context=".ui.main.characterGallery.CharacterGalleryFragment">
 
     <data>
 
         <variable
-            name="charaGalleryViewModel"
-            type="de.buadrabas.dnd_companion.ui.characterGallery.CharaGalleryViewModel" />
+            name="characterGalleryViewModel"
+            type="de.buadrabas.dnd_companion.ui.characterGallery.CharacterGalleryViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,6 +23,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:contentDescription="@string/fapDescription"
+            android:onClick="@{()->characterGalleryViewModel.onNewCharacter()}"
             android:focusable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -33,16 +34,17 @@
             android:layout_height="match_parent"
             tools:context=".activities.CharaGalleryActivity">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:paddingStart="12dp"
-            android:paddingTop="24dp"
-            android:paddingEnd="12dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:spanCount="1"
-            tools:listitem="@layout/list_chara_fields" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/character_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingStart="12dp"
+                android:paddingTop="24dp"
+                android:paddingEnd="12dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:spanCount="1"
+                tools:listitem="@layout/list_chara_fields" />
 
         </FrameLayout>
 

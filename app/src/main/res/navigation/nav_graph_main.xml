@@ -7,19 +7,38 @@
 
     <fragment
         android:id="@+id/nav_chara_gallery"
-        android:name="de.buadrabas.dnd_companion.ui.characterGallery.CharaGalleryFragment"
-        android:label="@string/menu_edit_chara"
-        tools:layout="@layout/fragment_chara_gallery" />
+        android:name="de.buadrabas.dnd_companion.ui.main.characterGallery.CharacterGalleryFragment"
+        android:label="@string/character_gallery_fragment"
+        tools:layout="@layout/fragment_chara_gallery" >
+        <action
+            android:id="@+id/action_nav_chara_gallery_to_nav_character_sheet"
+            app:destination="@id/nav_character_sheet"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_chara_gallery" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_character_sheet"
+        android:name="de.buadrabas.dnd_companion.ui.characterSheet.CharacterSheetFragment"
+        tools:layout="@layout/fragment_character_sheet"
+        android:label="@string/chara_sheet_fragment">
+        <action
+            android:id="@+id/action_nav_character_sheet_to_nav_chara_gallery"
+            app:destination="@id/nav_chara_gallery" />
+        <argument
+            android:name="characterId"
+            app:argType="long" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_dice"
-        android:name="de.buadrabas.dnd_companion.layout.fragment.DicePoolFragment"
+        android:name="de.buadrabas.dnd_companion.ui.dice.DicePoolFragment"
         android:label="@string/menu_dice"
         tools:layout="@layout/fragment_dice_pool" />
 
     <fragment
-        android:id="@+id/nav_chara_overview"
-        android:name="de.buadrabas.dnd_companion.layout.fragment.CharaGalleryFragment"
+        android:id="@+id/nav_notes_overview"
+        android:name="de.buadrabas.dnd_companion.ui.notes.NotesFragment"
         android:label="@string/menu_edit_chara"
-        tools:layout="@layout/fragment_chara_gallery" />
+        tools:layout="@layout/fragment_notes_list" />
 </navigation>
