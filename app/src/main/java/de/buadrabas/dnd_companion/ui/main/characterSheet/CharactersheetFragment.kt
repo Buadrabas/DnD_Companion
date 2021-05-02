@@ -1,4 +1,4 @@
-package de.buadrabas.dnd_companion.ui.characterSheet
+package de.buadrabas.dnd_companion.ui.main.characterSheet
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import de.buadrabas.dnd_companion.R
 import de.buadrabas.dnd_companion.data.character.CharacterDatabase
 import de.buadrabas.dnd_companion.databinding.FragmentCharacterSheetBinding
+
 
 class CharacterSheetFragment:Fragment(){
 	
@@ -39,7 +40,7 @@ class CharacterSheetFragment:Fragment(){
 		
 		binding.characterSheetViewModel = characterSheetViewModel
 		
-		binding.setLifecycleOwner(this)
+		binding.lifecycleOwner = this
 		
 		characterSheetViewModel?.navigateToCharacterGallery?.observe(viewLifecycleOwner, Observer {
 			if(it==true){

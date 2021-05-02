@@ -1,4 +1,4 @@
-package de.buadrabas.dnd_companion.ui.characterGallery
+package de.buadrabas.dnd_companion.ui.main.characterGallery
 
 import android.app.Application
 import androidx.lifecycle.ViewModel

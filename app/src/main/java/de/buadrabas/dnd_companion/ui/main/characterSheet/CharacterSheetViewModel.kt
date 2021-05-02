@@ -1,4 +1,4 @@
-package de.buadrabas.dnd_companion.ui.characterSheet
+package de.buadrabas.dnd_companion.ui.main.characterSheet
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -12,7 +12,7 @@ class CharacterSheetViewModel (
 	dataSource: CharacterDescriptionDao
 ) : ViewModel(){
 	
-	val database = dataSource
+	private val database = dataSource
 	
 	private val character: LiveData<CharacterDescription>
 	

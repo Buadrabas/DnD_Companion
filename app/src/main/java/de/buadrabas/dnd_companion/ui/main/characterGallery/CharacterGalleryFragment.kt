@@ -41,14 +41,21 @@ class CharacterGalleryFragment : Fragment() {
 		val dataSource = CharacterDatabase.getInstance(application).characterClassDao
 		val viewModelFactory = CharacterGalleryViewModelFactory(dataSource, application)
 		val characterViewModel = ViewModelProvider(this, viewModelFactory).get(
-			CharacterGalleryViewModel::class.java)
+			CharacterGalleryViewModel::class.java
+		)
 		
 		binding.characterGalleryViewModel = characterViewModel
 		
-		val adapter = CharaGalleryAdapter(NewCharacterListener{ characterId -> characterViewModel.onCharacterClicked(characterId) })
+		val adapter = CharacterGalleryAdapter(NewCharacterListener { characterId ->
+			characterViewModel.onCharacterClicked(characterId)
+		})
 		binding.characterList.adapter = adapter
 		
-		characterViewModel.allCharacters.observe(viewLifecycleOwner, Observer { it.let { adapter.addHeaderandSubmitList(it) } })
+		characterViewModel.allCharacters.observe(viewLifecycleOwner, Observer {
+			it?.let {
+				adapter.submitList(it)
+			}
+		})
 		
 		// Specify the current activity as the lifecycle owner of the binding.
 		// This is necessary so that the binding can observe LiveData updates.
@@ -57,21 +64,30 @@ class CharacterGalleryFragment : Fragment() {
 		val manager = LinearLayoutManager(activity)
 		manager.isSmoothScrollbarEnabled = true
 		
-		characterViewModel.navigateToCharacterDetails.observe(viewLifecycleOwner, Observer { character -> character?.let{
-			this.findNavController().navigate(
-				CharacterGalleryFragmentDirections.actionNavCharaGalleryToNavCharacterSheet(
-					character
-				)
-			)
-			characterViewModel.onCharacterDetailNavigated()
-		} })
+		characterViewModel.navigateToCharacterDetails.observe(
+			viewLifecycleOwner,
+			Observer { character ->
+				character?.let {
+					this.findNavController().navigate(
+						CharacterGalleryFragmentDirections.actionNavCharaGalleryToNavCharacterSheet(
+							character
+						)
+					)
+					characterViewModel.onCharacterDetailNavigated()
+				}
+			})
 		
-		characterViewModel.navigateToNewCharacter.observe(viewLifecycleOwner, Observer { character -> character?.let{
-				val intent = Intent(activity, CreateNewCharacterActivity::class.java
-			)
-			startActivity(intent)
-			characterViewModel.onCharacterDetailNavigated()
-		} })
+		characterViewModel.navigateToNewCharacter.observe(
+			viewLifecycleOwner,
+			Observer { character ->
+				character?.let {
+					val intent = Intent(
+						activity, CreateNewCharacterActivity::class.java
+					)
+					startActivity(intent)
+					characterViewModel.onCharacterDetailNavigated()
+				}
+			})
 		
 		binding.characterList.layoutManager = manager
 		

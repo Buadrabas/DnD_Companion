@@ -9,7 +9,7 @@
 
         <variable
             name="characterGalleryViewModel"
-            type="de.buadrabas.dnd_companion.ui.characterGallery.CharacterGalleryViewModel" />
+            type="de.buadrabas.dnd_companion.ui.main.characterGallery.CharacterGalleryViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

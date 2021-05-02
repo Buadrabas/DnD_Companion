@@ -1,4 +1,4 @@
-package de.buadrabas.dnd_companion.ui.characterGallery
+package de.buadrabas.dnd_companion.ui.main.characterGallery
 
 
 import android.app.Application
@@ -16,7 +16,7 @@ class CharacterGalleryViewModel(dataSource: CharacterDescriptionDao, application
 	 * Hold a reference to the CharacterDatabase via the DAO
 	 */
 	
-	val database = dataSource
+	private val database = dataSource
 	
 	private var currentCharacter = MutableLiveData<CharacterDescription?>()
 	

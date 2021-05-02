@@ -6,7 +6,7 @@
     <data>
         <variable
             name="characterSheetViewModel"
-            type="de.buadrabas.dnd_companion.ui.characterSheet.CharacterSheetViewModel" />
+            type="de.buadrabas.dnd_companion.ui.main.characterSheet.CharacterSheetViewModel" />
 
     </data>
 
@@ -15,7 +15,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.characterSheet.CharacterSheetFragment">
+        tools:context=".ui.main.characterSheet.CharacterSheetFragment">
 
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="fill_parent"

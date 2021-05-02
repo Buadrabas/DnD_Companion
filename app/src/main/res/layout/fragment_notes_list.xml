@@ -9,7 +9,7 @@
 
         <variable
             name="notesViewModel"
-            type="de.buadrabas.dnd_companion.ui.notes.NotesViewModel" />
+            type="de.buadrabas.dnd_companion.ui.main.notes.NotesViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

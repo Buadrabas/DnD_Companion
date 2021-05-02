@@ -9,7 +9,7 @@
 
         <variable
             name="dicePoolViewModel"
-            type="de.buadrabas.dnd_companion.ui.dice.DicePoolViewModel" />
+            type="de.buadrabas.dnd_companion.ui.main.dice.DicePoolViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

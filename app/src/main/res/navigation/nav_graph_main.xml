@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/nav_character_sheet"
-        android:name="de.buadrabas.dnd_companion.ui.characterSheet.CharacterSheetFragment"
+        android:name="de.buadrabas.dnd_companion.ui.main.characterSheet.CharacterSheetFragment"
         tools:layout="@layout/fragment_character_sheet"
         android:label="@string/chara_sheet_fragment">
         <action
@@ -32,13 +32,13 @@
 
     <fragment
         android:id="@+id/nav_dice"
-        android:name="de.buadrabas.dnd_companion.ui.dice.DicePoolFragment"
+        android:name="de.buadrabas.dnd_companion.ui.main.dice.DicePoolFragment"
         android:label="@string/menu_dice"
         tools:layout="@layout/fragment_dice_pool" />
 
     <fragment
         android:id="@+id/nav_notes_overview"
-        android:name="de.buadrabas.dnd_companion.ui.notes.NotesFragment"
+        android:name="de.buadrabas.dnd_companion.ui.main.notes.NotesFragment"
         android:label="@string/menu_edit_chara"
         tools:layout="@layout/fragment_notes_list" />
 </navigation>

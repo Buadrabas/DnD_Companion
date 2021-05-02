@@ -1,4 +1,4 @@
-package de.buadrabas.dnd_companion.ui.dice
+package de.buadrabas.dnd_companion.ui.main.dice
 
 import android.os.Bundle
 import android.view.LayoutInflater

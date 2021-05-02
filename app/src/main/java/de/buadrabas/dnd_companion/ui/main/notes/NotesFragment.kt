@@ -1,4 +1,4 @@
-package de.buadrabas.dnd_companion.ui.notes
+package de.buadrabas.dnd_companion.ui.main.notes
 
 import android.os.Bundle
 import android.view.LayoutInflater

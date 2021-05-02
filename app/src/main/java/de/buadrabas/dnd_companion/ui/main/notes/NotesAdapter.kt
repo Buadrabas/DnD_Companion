@@ -1,4 +1,4 @@
-package de.buadrabas.dnd_companion.ui.notes
+package de.buadrabas.dnd_companion.ui.main.notes
 
 
 class NotesAdapter

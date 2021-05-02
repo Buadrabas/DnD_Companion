@@ -100,11 +100,39 @@ data class CharacterDescription(
 	var characterId: Long = 0L,
 	
 	@ColumnInfo(name = "fullName")
-	val fullName: String = "",
+	val fullName: String = " ",
 	
 	@ColumnInfo(name = "playerName")
-	var playerName: String = "",
-)
+	var playerName: String = " ",
+	
+	@ColumnInfo(typeAffinity = ColumnInfo.BLOB)
+	var data: ByteArray? = null
+) {
+	override fun equals(other: Any?): Boolean {
+		if (this === other) return true
+		if (javaClass != other?.javaClass) return false
+		
+		other as CharacterDescription
+		
+		if (characterId != other.characterId) return false
+		if (fullName != other.fullName) return false
+		if (playerName != other.playerName) return false
+		if (data != null) {
+			if (other.data == null) return false
+			if (!data.contentEquals(other.data)) return false
+		} else if (other.data != null) return false
+		
+		return true
+	}
+	
+	override fun hashCode(): Int {
+		var result = characterId.hashCode()
+		result = 31 * result + fullName.hashCode()
+		result = 31 * result + playerName.hashCode()
+		result = 31 * result + (data?.contentHashCode() ?: 0)
+		return result
+	}
+}
 //	@ColumnInfo(name = "classList")
 //	var classList: MutableList<Int>,
 

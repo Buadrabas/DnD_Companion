@@ -1,4 +1,4 @@
-package de.buadrabas.dnd_companion.ui.characterSheet
+package de.buadrabas.dnd_companion.ui.main.characterSheet
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

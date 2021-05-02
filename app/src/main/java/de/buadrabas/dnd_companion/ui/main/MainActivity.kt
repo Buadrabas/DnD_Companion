@@ -1,4 +1,4 @@
-package de.buadrabas.dnd_companion
+package de.buadrabas.dnd_companion.ui.main
 
 import android.os.Bundle
 import android.view.Menu
@@ -11,6 +11,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
+import de.buadrabas.dnd_companion.R
 
 class MainActivity : AppCompatActivity() {
 	

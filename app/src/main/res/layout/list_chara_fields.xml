@@ -11,12 +11,13 @@
             type="de.buadrabas.dnd_companion.data.character.CharacterDescription" />
         <variable
             name="clickListener"
-            type="de.buadrabas.dnd_companion.ui.characterGallery.NewCharacterListener" />
+            type="de.buadrabas.dnd_companion.ui.main.characterGallery.NewCharacterListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/green_500"
         android:onClick="@{()->clickListener.onClick(chooseCharacter)}">
 
         <TextView
