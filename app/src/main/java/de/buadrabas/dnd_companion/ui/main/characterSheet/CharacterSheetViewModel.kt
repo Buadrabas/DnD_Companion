@@ -15,8 +15,14 @@ class CharacterSheetViewModel (
 	private val database = dataSource
 	
 	private val character: LiveData<CharacterDescription>
-	
 	fun getCharacter() = character
+	
+	private val _index = MutableLiveData<Int>()
+	
+	fun setIndex(index: Int){
+		_index.value = index
+	}
+	
 	
 	init{
 		character=database.getCharacterWithId(characterId)

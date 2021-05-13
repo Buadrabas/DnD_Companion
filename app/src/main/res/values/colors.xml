@@ -31,4 +31,7 @@
     <color name="secondaryDarkColor">#c43e00</color>
     <color name="primaryTextColor">#ffa726</color>
     <color name="secondaryTextColor">#3e2723</color>
+    <color name="hp">#ff1b6533</color>
+    <color name="hpBar">#ff581b10</color>
+
 </resources>

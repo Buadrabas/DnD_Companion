@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import de.buadrabas.dnd_companion.R
 import de.buadrabas.dnd_companion.data.character.CharacterDatabase
 import de.buadrabas.dnd_companion.databinding.FragmentCharaGalleryBinding
-import de.buadrabas.dnd_companion.ui.characterGallery.*
 import de.buadrabas.dnd_companion.ui.newCharacter.CreateNewCharacterActivity
 
 class CharacterGalleryFragment : Fragment() {
@@ -44,11 +43,13 @@ class CharacterGalleryFragment : Fragment() {
 			CharacterGalleryViewModel::class.java
 		)
 		
-		binding.characterGalleryViewModel = characterViewModel
-		
 		val adapter = CharacterGalleryAdapter(NewCharacterListener { characterId ->
 			characterViewModel.onCharacterClicked(characterId)
 		})
+		val manager = LinearLayoutManager(activity)
+		
+		binding.characterGalleryViewModel = characterViewModel
+		
 		binding.characterList.adapter = adapter
 		
 		characterViewModel.allCharacters.observe(viewLifecycleOwner, Observer {
@@ -61,7 +62,6 @@ class CharacterGalleryFragment : Fragment() {
 		// This is necessary so that the binding can observe LiveData updates.
 		binding.lifecycleOwner = this
 		
-		val manager = LinearLayoutManager(activity)
 		manager.isSmoothScrollbarEnabled = true
 		
 		characterViewModel.navigateToCharacterDetails.observe(

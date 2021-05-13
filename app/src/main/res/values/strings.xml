@@ -31,6 +31,11 @@
     <string name="notes">Notes</string>
     <string name="character_gallery_fragment">Character Gallery Fragment</string>
     <string name="chara_sheet_fragment">Character Details Fragment</string>
+    <string name="healthString">Health</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="characterpicture">characterPicture</string>
 
 
 </resources>

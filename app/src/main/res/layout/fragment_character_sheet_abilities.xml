@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.main.characterStatsOverview.CharacterStatsOverViewFragment">
+
+    <data>
+        <variable
+            name="characterSheetViewModel"
+            type="de.buadrabas.dnd_companion.ui.main.characterSheet.CharacterSheetViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/abilityString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/the_wild_breath_of_zelda"
+            android:text="Abilities"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ability_line_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/abilityString">
+
+            <TextView
+                android:id="@+id/strengthString"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Strength"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/ability_score_0"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                app:autoSizeTextType="uniform"
+                tools:text="ability_score_0" />
+
+            <TextView
+                android:id="@+id/ability_mod_0"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                app:autoSizeTextType="uniform"
+                tools:text="ability_mod_0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ability_line_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ability_line_0">
+
+            <TextView
+                android:id="@+id/dexterityString"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Dexterity"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/ability_score_1"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                app:autoSizeTextType="uniform"
+                tools:text="ability_score_0" />
+
+            <TextView
+                android:id="@+id/ability_mod_1"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                app:autoSizeTextType="uniform"
+                tools:text="ability_mod_0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ability_line_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ability_line_1">
+
+            <TextView
+                android:id="@+id/constitutionString"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Constitution"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/ability_score_2"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                app:autoSizeTextType="uniform"
+                tools:text="ability_score_0" />
+
+            <TextView
+                android:id="@+id/ability_mod_2"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                app:autoSizeTextType="uniform"
+                tools:text="ability_mod_0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ability_line_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ability_line_2">
+
+            <TextView
+                android:id="@+id/intelligenceString"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Intelligence"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/ability_score_3"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                app:autoSizeTextType="uniform"
+                tools:text="ability_score_0" />
+
+            <TextView
+                android:id="@+id/ability_mod_3"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                app:autoSizeTextType="uniform"
+                tools:text="ability_mod_0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ability_line_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ability_line_3">
+
+            <TextView
+                android:id="@+id/wisdomString"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Wisdom"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/ability_score_4"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                app:autoSizeTextType="uniform"
+                tools:text="ability_score_0" />
+
+            <TextView
+                android:id="@+id/ability_mod_4"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                app:autoSizeTextType="uniform"
+                tools:text="ability_mod_0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ability_line_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ability_line_4">
+
+            <TextView
+                android:id="@+id/charismaString"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Charisma"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/ability_score_5"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                app:autoSizeTextType="uniform"
+                tools:text="ability_score_0" />
+
+            <TextView
+                android:id="@+id/ability_mod_5"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                app:autoSizeTextType="uniform"
+                tools:text="ability_mod_0" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

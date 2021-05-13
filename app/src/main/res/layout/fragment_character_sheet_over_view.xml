@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.main.characterStatsOverview.CharacterStatsOverViewFragment">
+
+    <data>
+
+        <variable
+            name="characterSheetViewModel"
+            type="de.buadrabas.dnd_companion.ui.main.characterSheet.CharacterSheetViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/saveThrowFortitudeValue"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="10"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/saveThrowWillValue"
+            app:layout_constraintTop_toTopOf="@+id/saveThrowWillValue" />
+
+        <TextView
+            android:id="@+id/saveThrowWillValue"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="10"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/saveThrowReflexValue"
+            app:layout_constraintTop_toTopOf="@+id/saveThrowReflexValue" />
+
+        <TextView
+            android:id="@+id/saveThrowReflexValue"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="10"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/saveThrowReflexString" />
+
+        <TextView
+            android:id="@+id/saveThrowWillString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Will"
+            app:layout_constraintBottom_toTopOf="@+id/saveThrowWillValue"
+            app:layout_constraintEnd_toEndOf="@+id/saveThrowWillValue"
+            app:layout_constraintStart_toStartOf="@+id/saveThrowWillValue" />
+
+        <TextView
+            android:id="@+id/saveThrowReflexString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Reflex"
+            app:layout_constraintEnd_toEndOf="@+id/saveThrowReflexValue"
+            app:layout_constraintStart_toStartOf="@+id/saveThrowReflexValue"
+            app:layout_constraintTop_toBottomOf="@+id/saveThrowString" />
+
+        <TextView
+            android:id="@+id/saveThrowFortitudeString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Fortitude"
+            app:layout_constraintBottom_toTopOf="@+id/saveThrowFortitudeValue"
+            app:layout_constraintEnd_toEndOf="@+id/saveThrowFortitudeValue"
+            app:layout_constraintHorizontal_bias="0.483"
+            app:layout_constraintStart_toStartOf="@+id/saveThrowFortitudeValue" />
+
+        <TextView
+            android:id="@+id/saveThrowString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Save Throw"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/initiativeValue" />
+
+        <TextView
+            android:id="@+id/speedValue"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="30ft"
+            app:layout_constraintEnd_toEndOf="@+id/armorClassFlatValue"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/armorClassFlatValue"
+            app:layout_constraintTop_toTopOf="@+id/initiativeValue" />
+
+        <TextView
+            android:id="@+id/speedString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Speed"
+            app:layout_constraintEnd_toEndOf="@+id/speedValue"
+            app:layout_constraintHorizontal_bias="0.622"
+            app:layout_constraintStart_toStartOf="@+id/speedValue"
+            app:layout_constraintTop_toTopOf="@+id/InitiativeString" />
+
+        <TextView
+            android:id="@+id/HealthString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/supernatural_knight"
+            android:text="@string/healthString"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Health" />
+
+        <TextView
+            android:id="@+id/actualHp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HealthString"
+            tools:text="actualHp" />
+
+        <TextView
+            android:id="@+id/hpDividerString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="/"
+            app:layout_constraintStart_toEndOf="@+id/actualHp"
+            app:layout_constraintTop_toBottomOf="@+id/HealthString" />
+
+        <TextView
+            android:id="@+id/maxHpValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/hpDividerString"
+            app:layout_constraintTop_toBottomOf="@+id/HealthString"
+            tools:text="maxHp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+
+            android:layout_marginTop="8dp"
+            android:background="@color/hpBar"
+            android:clickable="true"
+            android:focusable="true"
+            android:progress="5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/actualHp"
+            app:layout_constraintTop_toBottomOf="@+id/actualHp" />
+
+        <TextView
+            android:id="@+id/armorClassString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="Armor Class"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/armorClassTotalValue"
+            app:layout_constraintStart_toStartOf="@+id/armorClassTotalValue"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+        <TextView
+            android:id="@+id/armorClassTotalString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Total"
+            app:layout_constraintEnd_toEndOf="@+id/armorClassTotalValue"
+            app:layout_constraintHorizontal_bias="0.373"
+            app:layout_constraintStart_toStartOf="@+id/armorClassTotalValue"
+            app:layout_constraintTop_toBottomOf="@+id/armorClassString" />
+
+        <TextView
+            android:id="@+id/armorClassFlatString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flat"
+            app:layout_constraintEnd_toEndOf="@+id/armorClassFlatValue"
+            app:layout_constraintStart_toStartOf="@+id/armorClassFlatValue"
+            app:layout_constraintTop_toTopOf="@+id/armorClassTotalString" />
+
+        <TextView
+            android:id="@+id/armorClassTouchString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Touch"
+            app:layout_constraintEnd_toEndOf="@+id/armorClassTouchValue"
+            app:layout_constraintStart_toStartOf="@+id/armorClassTouchValue"
+            app:layout_constraintTop_toTopOf="@+id/armorClassFlatString" />
+
+        <TextView
+            android:id="@+id/armorClassTotalValue"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="10"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/armorClassTotalString" />
+
+        <TextView
+            android:id="@+id/armorClassTouchValue"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="10"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/armorClassFlatValue"
+            app:layout_constraintTop_toTopOf="@+id/armorClassTotalValue" />
+
+        <TextView
+            android:id="@+id/armorClassFlatValue"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="10"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/armorClassTotalValue"
+            app:layout_constraintTop_toTopOf="@+id/armorClassTotalValue" />
+
+        <TextView
+            android:id="@+id/initiativeValue"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="10"
+            app:layout_constraintEnd_toEndOf="@+id/armorClassTotalValue"
+            app:layout_constraintStart_toStartOf="@+id/armorClassTotalValue"
+            app:layout_constraintTop_toBottomOf="@+id/InitiativeString" />
+
+        <TextView
+            android:id="@+id/InitiativeString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Initiative"
+            app:layout_constraintEnd_toEndOf="@+id/initiativeValue"
+            app:layout_constraintHorizontal_bias="0.543"
+            app:layout_constraintStart_toStartOf="@+id/initiativeValue"
+            app:layout_constraintTop_toBottomOf="@+id/armorClassTotalValue" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
